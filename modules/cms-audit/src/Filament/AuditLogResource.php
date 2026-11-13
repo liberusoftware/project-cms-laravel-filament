@@ -13,6 +13,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Liberu\Cms\Audit\Filament\Pages\ListAuditLogs;
@@ -60,9 +61,25 @@ final class AuditLogResource extends Resource
     }
 
     #[\Override]
+    public static function getCreateAuthorizationResponse(): Response
+    {
+        return self::canCreate()
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny();
+    }
+
+    #[\Override]
     public static function canEdit(Model $record): bool
     {
         return false;
+    }
+
+    #[\Override]
+    public static function getEditAuthorizationResponse(Model $record): Response
+    {
+        return self::canEdit($record)
+            ? parent::getEditAuthorizationResponse($record)
+            : Response::deny();
     }
 
     #[\Override]
@@ -72,9 +89,25 @@ final class AuditLogResource extends Resource
     }
 
     #[\Override]
+    public static function getDeleteAuthorizationResponse(Model $record): Response
+    {
+        return self::canDelete($record)
+            ? parent::getDeleteAuthorizationResponse($record)
+            : Response::deny();
+    }
+
+    #[\Override]
     public static function canDeleteAny(): bool
     {
         return false;
+    }
+
+    #[\Override]
+    public static function getDeleteAnyAuthorizationResponse(): Response
+    {
+        return self::canDeleteAny()
+            ? parent::getDeleteAnyAuthorizationResponse()
+            : Response::deny();
     }
 
     #[\Override]
