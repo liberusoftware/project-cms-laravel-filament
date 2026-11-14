@@ -1,12 +1,172 @@
 [
   {
-    "name": "liberusoftware/currency-context",
-    "repository": "https://github.com/liberusoftware/module-currency-context",
+    "name": "liberusoftware/module-maintenance-assets-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-assets-api",
     "type": "liberu-module"
   },
   {
-    "name": "liberusoftware/music-media-library",
-    "repository": "https://github.com/liberusoftware/module-music-media-library",
+    "name": "liberusoftware/module-maintenance-commercial",
+    "repository": "https://github.com/liberusoftware/module-maintenance-commercial",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-commercial-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-commercial-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-compliance-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-compliance-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-assets",
+    "repository": "https://github.com/liberusoftware/module-maintenance-assets",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-compliance",
+    "repository": "https://github.com/liberusoftware/module-maintenance-compliance",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-customers-and-sites-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-customers-and-sites-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-documents-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-documents-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-customers-and-sites",
+    "repository": "https://github.com/liberusoftware/module-maintenance-customers-and-sites",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-documents",
+    "repository": "https://github.com/liberusoftware/module-maintenance-documents",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-inspections-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-inspections-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-inspections-filament",
+    "repository": "https://github.com/liberusoftware/module-maintenance-inspections-filament",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-inspections-livewire",
+    "repository": "https://github.com/liberusoftware/module-maintenance-inspections-livewire",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-inventory-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-inventory-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-inventory",
+    "repository": "https://github.com/liberusoftware/module-maintenance-inventory",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-inspections",
+    "repository": "https://github.com/liberusoftware/module-maintenance-inspections",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-labor-and-time-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-labor-and-time-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-notes",
+    "repository": "https://github.com/liberusoftware/module-maintenance-notes",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-labor-and-time",
+    "repository": "https://github.com/liberusoftware/module-maintenance-labor-and-time",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-notes-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-notes-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-portals-filament",
+    "repository": "https://github.com/liberusoftware/module-maintenance-portals-filament",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-preventative-maintenance-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-preventative-maintenance-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-procurement-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-procurement-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-preventative-maintenance",
+    "repository": "https://github.com/liberusoftware/module-maintenance-preventative-maintenance",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-procurement",
+    "repository": "https://github.com/liberusoftware/module-maintenance-procurement",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-reporting-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-reporting-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-reporting",
+    "repository": "https://github.com/liberusoftware/module-maintenance-reporting",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-reporting-filament",
+    "repository": "https://github.com/liberusoftware/module-maintenance-reporting-filament",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-scheduling-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-scheduling-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-tasks",
+    "repository": "https://github.com/liberusoftware/module-maintenance-tasks",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-tasks-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-tasks-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-work-orders-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-work-orders-api",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-work-orders",
+    "repository": "https://github.com/liberusoftware/module-maintenance-work-orders",
+    "type": "liberu-module"
+  },
+  {
+    "name": "liberusoftware/module-maintenance-scheduling",
+    "repository": "https://github.com/liberusoftware/module-maintenance-scheduling",
     "type": "liberu-module"
   }
 ]
