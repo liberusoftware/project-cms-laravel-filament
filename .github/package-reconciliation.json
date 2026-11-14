@@ -1,18 +1,86 @@
 [
   {
-    "name": "liberusoftware/module-social-network-events-filament",
-    "repository": "https://github.com/liberusoftware/module-social-network-events-filament",
+    "name": "liberusoftware/ecommerce-printful",
+    "repository": "https://github.com/liberusoftware/module-ecommerce-printful",
     "type": "liberu-module",
-    "installer_name": "social-network-events-filament",
-    "declared_version": "0.1.0",
-    "description": "Filament presentation adapter for social network events."
+    "installer_name": "ecommerce-printful",
+    "declared_version": "0.2.0"
   },
   {
-    "name": "liberusoftware/module-social-network-discovery-filament",
-    "repository": "https://github.com/liberusoftware/module-social-network-discovery-filament",
+    "name": "liberusoftware/module-maintenance-reporting-api",
+    "repository": "https://github.com/liberusoftware/module-maintenance-reporting-api",
     "type": "liberu-module",
-    "installer_name": "social-network-discovery-filament",
+    "installer_name": "module-maintenance-reporting-api",
+    "declared_version": ""
+  },
+  {
+    "name": "liberusoftware/module-maintenance-reporting",
+    "repository": "https://github.com/liberusoftware/module-maintenance-reporting",
+    "type": "liberu-module",
+    "installer_name": "module-maintenance-reporting",
+    "declared_version": ""
+  },
+  {
+    "name": "liberusoftware/module-maintenance-reporting-filament",
+    "repository": "https://github.com/liberusoftware/module-maintenance-reporting-filament",
+    "type": "liberu-module",
+    "installer_name": "module-maintenance-reporting-filament",
+    "declared_version": ""
+  },
+  {
+    "name": "liberusoftware/module-maintenance-reporting-livewire",
+    "repository": "https://github.com/liberusoftware/module-maintenance-reporting-livewire",
+    "type": "liberu-module",
+    "installer_name": "module-maintenance-reporting-livewire",
+    "declared_version": ""
+  },
+  {
+    "name": "liberusoftware/music-audio-engine",
+    "repository": "https://github.com/liberusoftware/module-music-audio-engine",
+    "type": "liberu-module",
+    "installer_name": "music-audio-engine",
+    "declared_version": "0.1.0"
+  },
+  {
+    "name": "liberusoftware/music-media-library-api",
+    "repository": "https://github.com/liberusoftware/module-music-media-library-api",
+    "type": "liberu-module",
+    "installer_name": "music-media-library-api",
+    "declared_version": "0.1.0"
+  },
+  {
+    "name": "liberusoftware/music-projects-filament",
+    "repository": "https://github.com/liberusoftware/module-music-projects-filament",
+    "type": "liberu-module",
+    "installer_name": "music-projects-filament",
+    "declared_version": "0.1.0"
+  },
+  {
+    "name": "liberusoftware/module-cms-copilot-api",
+    "repository": "https://github.com/liberusoftware/module-cms-copilot-api",
+    "type": "liberu-module",
+    "installer_name": "module-cms-copilot-api",
     "declared_version": "0.1.0",
-    "description": "Filament presentation adapter for social network discovery."
+    "remove_requirements": [
+      "liberusoftware/module-cms-copilot"
+    ],
+    "dependency_requirements": {
+      "liberusoftware/module-cms-cms-copilot": "^0.1"
+    },
+    "extra_core": "liberusoftware/module-cms-cms-copilot"
+  },
+  {
+    "name": "liberusoftware/module-cms-copilot-livewire",
+    "repository": "https://github.com/liberusoftware/module-cms-copilot-livewire",
+    "type": "liberu-module",
+    "installer_name": "module-cms-copilot-livewire",
+    "declared_version": "0.1.0",
+    "remove_requirements": [
+      "liberusoftware/module-cms-copilot"
+    ],
+    "dependency_requirements": {
+      "liberusoftware/module-cms-cms-copilot": "^0.1"
+    },
+    "extra_core": "liberusoftware/module-cms-cms-copilot"
   }
 ]

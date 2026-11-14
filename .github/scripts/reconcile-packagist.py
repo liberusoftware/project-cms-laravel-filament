@@ -90,7 +90,11 @@ def publish(item):
                 raise RuntimeError(f'{repository} declares {current_name}, expected {name}')
             metadata['name'] = name
             metadata.setdefault('extra', {}).setdefault('liberu', {})['name'] = item['installer_name']
+        for dependency in item.get('remove_requirements', []):
+            metadata.setdefault('require', {}).pop(dependency, None)
         metadata.setdefault('require', {}).update(item.get('dependency_requirements', {}))
+        if item.get('extra_core'):
+            metadata.setdefault('extra', {}).setdefault('liberu', {})['core'] = item['extra_core']
         if item.get('description'):
             metadata['description'] = item['description']
         if metadata.get('type') != item['type']:
