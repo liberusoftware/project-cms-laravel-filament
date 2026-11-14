@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: sync-packages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   sync:

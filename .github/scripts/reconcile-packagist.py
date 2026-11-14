@@ -90,12 +90,13 @@ def publish(item):
                 raise RuntimeError(f'{repository} declares {current_name}, expected {name}')
             metadata['name'] = name
             metadata.setdefault('extra', {}).setdefault('liberu', {})['name'] = item['installer_name']
+        metadata.setdefault('require', {}).update(item.get('dependency_requirements', {}))
         if metadata.get('type') != item['type']:
             raise RuntimeError(f'{name}: package type differs from the project module')
         tags = command(['git', 'tag', '--list'], target).splitlines()
         head_tags = command(['git', 'tag', '--points-at', 'HEAD'], target).splitlines()
         compatible_head = [tag for tag in head_tags if version(tag) and (not metadata.get('version') or version(tag) == version(metadata['version']))]
-        if compatible_head and current_name == name:
+        if compatible_head and metadata == json.loads(original):
             chosen = max(compatible_head, key=version)
         else:
             chosen = 'v' + release_version(tags, metadata.get('version') or item.get('declared_version', ''))
