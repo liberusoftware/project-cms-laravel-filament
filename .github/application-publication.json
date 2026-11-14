@@ -1,0 +1,190 @@
+[
+  {
+    "repository": "liberusoftware/project-genealogy-laravel-filament",
+    "name": "liberusoftware/genealogy-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-ecommerce-laravel-filament",
+    "name": "liberusoftware/ecommerce-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-accounting-erp-laravel-filament",
+    "name": "liberusoftware/accounting-erp-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-boilerplate-laravel-filament",
+    "name": "liberusoftware/boilerplate-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-crm-laravel-filament",
+    "name": "liberusoftware/crm-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-real-estate-laravel-filament",
+    "name": "liberusoftware/real-estate-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-cms-laravel-filament",
+    "name": "liberusoftware/cms-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-billing-laravel-filament",
+    "name": "liberusoftware/billing-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-maintenance-laravel-filament",
+    "name": "liberusoftware/maintenance-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-automation-laravel-filament",
+    "name": "liberusoftware/automation-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-control-panel-laravel-filament",
+    "name": "liberusoftware/control-panel-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-social-network-laravel-filament",
+    "name": "liberusoftware/social-network-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-browser-game-laravel-filament",
+    "name": "liberusoftware/browser-game-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-boilerplate-laravel-inertia-react",
+    "name": "liberusoftware/project-boilerplate-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-cms-laravel-inertia-react",
+    "name": "liberusoftware/project-cms-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-music-daw-laravel-filament",
+    "name": "liberusoftware/music-daw-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-maintenance-laravel-inertia-react",
+    "name": "liberusoftware/project-maintenance-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-billing-laravel-inertia-react",
+    "name": "liberusoftware/project-billing-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-cms-laravel-inertia-vue",
+    "name": "liberusoftware/project-cms-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-boilerplate-laravel-inertia-vue",
+    "name": "liberusoftware/project-boilerplate-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-crm-laravel-inertia-react",
+    "name": "liberusoftware/project-crm-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-genealogy-laravel-inertia-react",
+    "name": "liberusoftware/project-genealogy-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-genealogy-laravel-inertia-vue",
+    "name": "liberusoftware/project-genealogy-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-maintenance-laravel-inertia-vue",
+    "name": "liberusoftware/project-maintenance-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-crm-laravel-inertia-vue",
+    "name": "liberusoftware/project-crm-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-ecommerce-laravel-inertia-react",
+    "name": "liberusoftware/project-ecommerce-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-automation-laravel-inertia-vue",
+    "name": "liberusoftware/project-automation-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-ecommerce-laravel-inertia-vue",
+    "name": "liberusoftware/project-ecommerce-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-enterprise-sap-laravel-filament",
+    "name": "liberusoftware/enterprise-sap-laravel"
+  },
+  {
+    "repository": "liberusoftware/project-billing-laravel-inertia-vue",
+    "name": "liberusoftware/project-billing-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-automation-laravel-inertia-react",
+    "name": "liberusoftware/project-automation-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-accounting-erp-laravel-inertia-react",
+    "name": "liberusoftware/project-accounting-erp-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-music-daw-laravel-inertia-vue",
+    "name": "liberusoftware/project-music-daw-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-control-panel-laravel-inertia-vue",
+    "name": "liberusoftware/project-control-panel-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-real-estate-laravel-inertia-react",
+    "name": "liberusoftware/project-real-estate-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-liberu-official-laravel-inertia-vue",
+    "name": "liberusoftware/project-liberu-official-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-control-panel-laravel-inertia-react",
+    "name": "liberusoftware/project-control-panel-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-real-estate-laravel-inertia-vue",
+    "name": "liberusoftware/project-real-estate-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-social-network-laravel-inertia-vue",
+    "name": "liberusoftware/project-social-network-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-music-daw-laravel-inertia-react",
+    "name": "liberusoftware/project-music-daw-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-browser-game-laravel-inertia-react",
+    "name": "liberusoftware/project-browser-game-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-liberu-official-laravel-inertia-react",
+    "name": "liberusoftware/project-liberu-official-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-enterprise-sap-laravel-inertia-vue",
+    "name": "liberusoftware/project-enterprise-sap-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-enterprise-sap-laravel-inertia-react",
+    "name": "liberusoftware/project-enterprise-sap-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-accounting-erp-laravel-inertia-vue",
+    "name": "liberusoftware/project-accounting-erp-laravel-inertia-vue"
+  },
+  {
+    "repository": "liberusoftware/project-social-network-laravel-inertia-react",
+    "name": "liberusoftware/project-social-network-laravel-inertia-react"
+  },
+  {
+    "repository": "liberusoftware/project-browser-game-laravel-inertia-vue",
+    "name": "liberusoftware/project-browser-game-laravel-inertia-vue"
+  }
+]
