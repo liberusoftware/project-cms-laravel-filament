@@ -45,12 +45,14 @@ jobs:
           GH_TOKEN: ${{ secrets.MODULE_SYNC_TOKEN }}
           PACKAGIST_USERNAME: ${{ secrets.PACKAGIST_USERNAME }}
           PACKAGIST_API_TOKEN: ${{ secrets.PACKAGIST_API_TOKEN }}
-        run: python3 .github/scripts/reconcile-packagist.py
+        run: |
+          python3 -m py_compile .github/scripts/refresh-package-index.py
+          python3 .github/scripts/refresh-package-index.py
 
       - name: Preserve publication results
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: package-publication-results
-          path: package-publication-results.jsonl
+          name: package-index-results
+          path: package-index-results.jsonl
           if-no-files-found: warn
