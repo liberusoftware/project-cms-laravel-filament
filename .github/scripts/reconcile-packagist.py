@@ -157,4 +157,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-# Publish the verified accounting adapter compatibility.
+# Publish the verified workspace migration compatibility.
