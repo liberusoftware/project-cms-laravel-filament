@@ -1,0 +1,75 @@
+name: Publish Composer application
+
+on:
+  workflow_call:
+    secrets:
+      PACKAGIST_USERNAME:
+        required: true
+      PACKAGIST_API_TOKEN:
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-composer-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository_owner == 'liberusoftware' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: packagist
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Publish the public application manifest
+        env:
+          PACKAGIST_USERNAME: ${{ secrets.PACKAGIST_USERNAME }}
+          PACKAGIST_API_TOKEN: ${{ secrets.PACKAGIST_API_TOKEN }}
+          REPOSITORY_PRIVATE: ${{ github.event.repository.private }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, re, time
+          from urllib.error import HTTPError
+          from urllib.request import Request, urlopen
+          from pathlib import Path
+
+          if os.environ['REPOSITORY_PRIVATE'] != 'false':
+              raise SystemExit('Private repositories must not be submitted to public Packagist.')
+          repository = os.environ['GITHUB_REPOSITORY']
+          manifest = json.loads(Path('composer.json').read_text())
+          name = manifest.get('name', '')
+          if not repository.startswith('liberusoftware/project-') or not re.fullmatch(r'liberusoftware/[a-z0-9_.-]+', name) or manifest.get('type') != 'project':
+              raise SystemExit('Unexpected application repository, Composer name, or package type.')
+          url = 'https://github.com/' + repository
+
+          def request(endpoint, payload=None):
+              headers = {'Accept': 'application/json', 'User-Agent': 'Liberu-Composer-application-publisher'}
+              if payload is not None:
+                  headers.update({'Content-Type': 'application/json', 'Authorization': 'Bearer ' + os.environ['PACKAGIST_USERNAME'] + ':' + os.environ['PACKAGIST_API_TOKEN']})
+              for attempt in range(4):
+                  try:
+                      data = json.dumps(payload).encode() if payload is not None else None
+                      with urlopen(Request(endpoint, data=data, headers=headers), timeout=60) as response:
+                          return json.load(response)
+                  except HTTPError as error:
+                      if error.code == 404 and payload is None:
+                          return None
+                      if error.code in (429, 502, 503, 504) and attempt < 3:
+                          time.sleep(5 * (attempt + 1))
+                          continue
+                      raise RuntimeError('Packagist returned HTTP ' + str(error.code)) from None
+
+          existing = request('https://packagist.org/packages/' + name + '.json')
+          if existing and existing['package']['repository'].removesuffix('.git').rstrip('/').lower() != url.lower():
+              raise SystemExit('The package is registered to another repository; review its canonical URL before publishing.')
+          action = 'update-package' if existing else 'create-package'
+          response = request('https://packagist.org/api/' + action, {'repository': url})
+          if response.get('status') != 'success':
+              raise SystemExit('Packagist did not accept publication.')
+          print(name + ': publication accepted for ' + os.environ['GITHUB_SHA'])
+          PY
