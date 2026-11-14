@@ -1,72 +1,18 @@
 [
   {
-    "name": "liberusoftware/billing-cpanel",
-    "repository": "https://github.com/liberusoftware/module-module-billing-cpanel",
+    "name": "liberusoftware/module-social-network-events-filament",
+    "repository": "https://github.com/liberusoftware/module-social-network-events-filament",
     "type": "liberu-module",
-    "installer_name": "module-billing-cpanel",
+    "installer_name": "social-network-events-filament",
     "declared_version": "0.1.0",
-    "dependency_requirements": {
-      "guzzlehttp/guzzle": "^7.16.1 || ^8.5"
-    }
+    "description": "Filament presentation adapter for social network events."
   },
   {
-    "name": "liberusoftware/billing-directadmin",
-    "repository": "https://github.com/liberusoftware/module-module-billing-directadmin",
+    "name": "liberusoftware/module-social-network-discovery-filament",
+    "repository": "https://github.com/liberusoftware/module-social-network-discovery-filament",
     "type": "liberu-module",
-    "installer_name": "module-billing-directadmin",
+    "installer_name": "social-network-discovery-filament",
     "declared_version": "0.1.0",
-    "dependency_requirements": {
-      "guzzlehttp/guzzle": "^7.16.1 || ^8.5"
-    }
-  },
-  {
-    "name": "liberusoftware/billing-liberu-control-panel",
-    "repository": "https://github.com/liberusoftware/module-module-billing-liberu-control-panel",
-    "type": "liberu-module",
-    "installer_name": "module-billing-liberu-control-panel",
-    "declared_version": "0.1.0",
-    "dependency_requirements": {
-      "guzzlehttp/guzzle": "^7.16.1 || ^8.5"
-    }
-  },
-  {
-    "name": "liberusoftware/billing-plesk",
-    "repository": "https://github.com/liberusoftware/module-billing-plesk",
-    "type": "liberu-module",
-    "installer_name": "module-billing-plesk",
-    "declared_version": "0.1.0",
-    "dependency_requirements": {
-      "guzzlehttp/guzzle": "^7.16.1 || ^8.5"
-    }
-  },
-  {
-    "name": "liberusoftware/billing-virtualmin",
-    "repository": "https://github.com/liberusoftware/module-billing-virtualmin",
-    "type": "liberu-module",
-    "installer_name": "module-billing-virtualmin",
-    "declared_version": "0.1.0",
-    "dependency_requirements": {
-      "guzzlehttp/guzzle": "^7.16.1 || ^8.5"
-    }
-  },
-  {
-    "name": "liberusoftware/module-billing-hosting",
-    "repository": "https://github.com/liberusoftware/module-module-billing-hosting",
-    "type": "liberu-module",
-    "installer_name": "module-billing-hosting",
-    "declared_version": "0.1.0",
-    "dependency_requirements": {
-      "guzzlehttp/guzzle": "^7.16.1 || ^8.5"
-    }
-  },
-  {
-    "name": "liberusoftware/billing-stripe",
-    "repository": "https://github.com/liberusoftware/module-billing-stripe",
-    "type": "liberu-module",
-    "installer_name": "module-billing-stripe",
-    "declared_version": "0.1.0",
-    "dependency_requirements": {
-      "stripe/stripe-php": "^20.3 || ^23.0"
-    }
+    "description": "Filament presentation adapter for social network discovery."
   }
 ]

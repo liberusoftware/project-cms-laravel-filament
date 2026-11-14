@@ -91,6 +91,8 @@ def publish(item):
             metadata['name'] = name
             metadata.setdefault('extra', {}).setdefault('liberu', {})['name'] = item['installer_name']
         metadata.setdefault('require', {}).update(item.get('dependency_requirements', {}))
+        if item.get('description'):
+            metadata['description'] = item['description']
         if metadata.get('type') != item['type']:
             raise RuntimeError(f'{name}: package type differs from the project module')
         tags = command(['git', 'tag', '--list'], target).splitlines()
