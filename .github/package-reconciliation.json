@@ -1,17 +1,7 @@
 [
   {
-    "name": "liberusoftware/crm-application",
-    "repository": "https://github.com/liberusoftware/module-crm-application",
-    "type": "liberu-module"
-  },
-  {
-    "name": "liberusoftware/crm-application-filament",
-    "repository": "https://github.com/liberusoftware/module-crm-application-filament",
-    "type": "liberu-module"
-  },
-  {
-    "name": "liberusoftware/crm-application-http",
-    "repository": "https://github.com/liberusoftware/module-crm-application-http",
+    "name": "liberusoftware/integrations",
+    "repository": "https://github.com/liberusoftware/module-integrations",
     "type": "liberu-module"
   }
 ]
