@@ -120,9 +120,6 @@ def publish(item):
             command(['git', 'tag', '-a', chosen, '-m', f'Release {chosen}'], target)
             command(['git', 'push', '--atomic', 'origin', f'HEAD:refs/heads/{branch}', f'refs/tags/{chosen}'], target)
         reference = command(['git', 'rev-parse', 'HEAD'], target)
-        exists = subprocess.run(['gh', 'release', 'view', chosen, '--repo', repository.removeprefix('https://github.com/')], capture_output=True).returncode == 0
-        if not exists:
-            command(['gh', 'release', 'create', chosen, '--verify-tag', '--repo', repository.removeprefix('https://github.com/'), '--title', chosen, '--notes', 'Publish the current standalone module for Composer installation and updates.'])
         register(name, repository)
         return {'name': name, 'repository': repository, 'version': chosen[1:], 'reference': reference, 'previous_reference': before}
 
