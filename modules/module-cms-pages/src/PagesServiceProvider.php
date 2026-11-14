@@ -1,0 +1,98 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\Cms\Pages;
+
+use Liberu\Cms\Contracts\Access\AccessScope;
+use Liberu\Cms\Contracts\Access\PermissionGroup;
+use Liberu\Cms\Contracts\Access\PermissionRegistrarInterface;
+use Liberu\Cms\Contracts\Admin\AdminDashboardRegistryInterface;
+use Liberu\Cms\Contracts\Admin\AdminResourceRegistryInterface;
+use Liberu\Cms\Contracts\Admin\DashboardStat;
+use Liberu\Cms\Contracts\Api\ApiEndpoint;
+use Liberu\Cms\Contracts\Api\ApiResourceRegistryInterface;
+use Liberu\Cms\Contracts\Module\ModuleInterface;
+use Liberu\Cms\Contracts\Preview\PreviewRegistryInterface;
+use Liberu\Cms\Contracts\Search\SearchRegistryInterface;
+use Liberu\Cms\Contracts\Seo\SitemapRegistryInterface;
+use Liberu\Cms\Core\Module\ModuleServiceProvider;
+use Liberu\Cms\Pages\Contracts\PageRepositoryInterface;
+use Liberu\Cms\Pages\Filament\PageResource;
+use Liberu\Cms\Pages\Http\Controllers\PageApiController;
+use Liberu\Cms\Pages\Http\Controllers\PageWriteController;
+use Liberu\Cms\Pages\Models\Page;
+use Liberu\Cms\Pages\Preview\PagePreviewSource;
+use Liberu\Cms\Pages\Queries\PageTreeQuery;
+use Liberu\Cms\Pages\Repositories\PageRepository;
+use Liberu\Cms\Pages\Search\PageSearchSource;
+use Liberu\Cms\Pages\Seo\PageSitemapProvider;
+use Liberu\Cms\Pages\Services\PageRoutingService;
+
+final class PagesServiceProvider extends ModuleServiceProvider
+{
+    public function module(): ModuleInterface
+    {
+        return new PagesModule;
+    }
+
+    protected function registerModule(): void
+    {
+        $this->mergeModuleConfig(__DIR__.'/../config/pages.php', 'cms-pages');
+
+        $this->app->singleton(PageRepositoryInterface::class, PageRepository::class);
+        $this->app->singleton(PageTreeQuery::class);
+        $this->app->singleton(PageRoutingService::class);
+
+        if ($this->app->bound(AdminResourceRegistryInterface::class)) {
+            $this->app->make(AdminResourceRegistryInterface::class)->registerResource('pages', PageResource::class);
+        }
+
+        if ($this->app->bound(ApiResourceRegistryInterface::class)) {
+            $registry = $this->app->make(ApiResourceRegistryInterface::class);
+            $registry->registerEndpoint('pages', new ApiEndpoint('pages', PageApiController::class, 'index', 'pages.index'));
+            $registry->registerEndpoint('pages', new ApiEndpoint('pages/{slug}', PageApiController::class, 'show', 'pages.show'));
+            $registry->registerEndpoint('pages', new ApiEndpoint('pages', PageWriteController::class, 'store', 'pages.store', 'POST', ['abilities:content:write']));
+            $registry->registerEndpoint('pages', new ApiEndpoint('pages/{id}', PageWriteController::class, 'update', 'pages.update', 'PUT', ['abilities:content:write']));
+            $registry->registerEndpoint('pages', new ApiEndpoint('pages/{id}', PageWriteController::class, 'destroy', 'pages.destroy', 'DELETE', ['abilities:content:write']));
+        }
+
+        if ($this->app->bound(PreviewRegistryInterface::class)) {
+            $this->app->make(PreviewRegistryInterface::class)
+                ->registerSource($this->app->make(PagePreviewSource::class));
+        }
+    }
+
+    protected function bootModule(): void
+    {
+        $this->loadModuleMigrations(__DIR__.'/../database/migrations');
+
+        if ($this->app->bound(AdminDashboardRegistryInterface::class)) {
+            $this->app->make(AdminDashboardRegistryInterface::class)->registerStat(
+                new DashboardStat('Pages', fn (): int => Page::count(), 'heroicon-o-document-text', 'primary'),
+            );
+        }
+
+        if ($this->app->bound(SitemapRegistryInterface::class)) {
+            $this->app->make(SitemapRegistryInterface::class)
+                ->registerProvider($this->app->make(PageSitemapProvider::class));
+        }
+
+        if ($this->app->bound(SearchRegistryInterface::class)) {
+            $this->app->make(SearchRegistryInterface::class)
+                ->registerSource($this->app->make(PageSearchSource::class));
+        }
+
+        if ($this->app->bound(PermissionRegistrarInterface::class)) {
+            $this->app->make(PermissionRegistrarInterface::class)->register(
+                new PermissionGroup('pages', 'Pages', AccessScope::Content, ['view', 'create', 'update', 'delete']),
+            );
+        }
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/pages.php' => $this->app->configPath('cms-pages.php'),
+            ], 'cms-pages-config');
+        }
+    }
+}

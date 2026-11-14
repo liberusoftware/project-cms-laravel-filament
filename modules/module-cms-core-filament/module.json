@@ -1,7 +1,11 @@
 {
-    "name": "module-cms-core-filament",
-    "package": "liberusoftware/module-cms-core-filament",
-    "version": "0.1.0",
-    "layers": ["filament"],
-    "service_providers": ["Liberu\\Cms\\CoreFilament\\CoreFilamentServiceProvider"]
+  "name": "module-cms-core-filament",
+  "package": "liberusoftware/module-cms-core-filament",
+  "version": "0.1.1",
+  "layers": [
+    "filament"
+  ],
+  "service_providers": [
+    "Liberu\\Cms\\CoreFilament\\CoreFilamentServiceProvider"
+  ]
 }

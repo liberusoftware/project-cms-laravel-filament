@@ -1,1 +1,61 @@
-{"name":"liberusoftware/module-cms-site-factory-api","description":"API adapter for CMS Site Factory.","type":"liberu-module","version":"0.1.0","license":"MIT","require":{"php":"^8.5","liberusoftware/module-cms-site-factory":"^0.1"},"autoload":{"psr-4":{"Liberu\\Cms\\SiteFactoryApi\\":"src/"}},"extra":{"liberu":{"name":"module-cms-site-factory-api","core":"liberusoftware/module-cms-site-factory"},"laravel":{"providers":["Liberu\\Cms\\SiteFactoryApi\\SiteFactoryApiServiceProvider"]}}}
+{
+  "name": "liberusoftware/module-cms-site-factory-api",
+  "description": "API adapter for CMS Site Factory.",
+  "type": "liberu-module",
+  "version": "0.1.1",
+  "license": "MIT",
+  "require": {
+    "php": "^8.5",
+    "liberusoftware/module-cms-site-factory": "^0.1",
+    "liberusoftware/module-cms-core": "^0.1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\SiteFactoryApi\\": "src/"
+    }
+  },
+  "extra": {
+    "liberu": {
+      "name": "module-cms-site-factory-api",
+      "core": "liberusoftware/module-cms-site-factory"
+    },
+    "laravel": {
+      "providers": [
+        "Liberu\\Cms\\SiteFactoryApi\\SiteFactoryApiServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "liberusoftware/package-testbench": "^1.8",
+    "pestphp/pest": "^5.3.3",
+    "liberusoftware/module-cms-api": "^0.1"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\Cms\\SiteFactoryApi\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "pest",
+    "test:coverage": "pest --coverage --min=100"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/liberusoftware/module-cms-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/liberusoftware/module-cms-api.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/liberusoftware/module-cms-contracts.git"
+    }
+  ]
+}

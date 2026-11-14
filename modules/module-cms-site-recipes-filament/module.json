@@ -1,1 +1,11 @@
-{"name":"module-cms-site-recipes-filament","package":"liberusoftware/module-cms-site-recipes-filament","version":"0.1.0","layers":["filament"],"service_providers":["Liberu\\Cms\\SiteRecipesFilament\\SiteRecipesFilamentServiceProvider"]}
+{
+  "name": "module-cms-site-recipes-filament",
+  "package": "liberusoftware/module-cms-site-recipes-filament",
+  "version": "0.1.1",
+  "layers": [
+    "filament"
+  ],
+  "service_providers": [
+    "Liberu\\Cms\\SiteRecipesFilament\\SiteRecipesFilamentServiceProvider"
+  ]
+}

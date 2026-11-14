@@ -1,0 +1,7 @@
+{
+  "name": "module-cms-extension-marketplace",
+  "title": "Extension Marketplace",
+  "description": "Tenant-aware signed extension catalog and distribution lifecycle.",
+  "version": "0.1.0",
+  "package": "liberusoftware/module-cms-extension-marketplace"
+}

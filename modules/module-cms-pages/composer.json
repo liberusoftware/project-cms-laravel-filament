@@ -1,0 +1,45 @@
+{
+  "name": "liberusoftware/module-cms-pages",
+  "description": "Pages module for Liberu CMS: hierarchical pages with editorial workflow, versioning, slugs, and featured media.",
+  "type": "liberu-module",
+  "license": "MIT",
+  "homepage": "https://github.com/liberusoftware/module-cms-pages",
+  "support": {
+    "issues": "https://github.com/liberusoftware/module-cms-pages/issues",
+    "source": "https://github.com/liberusoftware/module-cms-pages"
+  },
+  "version": "0.1.1",
+  "require": {
+    "php": "^8.5",
+    "liberusoftware/module-cms-contracts": "^0.1",
+    "liberusoftware/module-cms-core": "^0.1",
+    "liberusoftware/module-cms-content": "^0.1",
+    "filament/filament": "^5.11.0",
+    "illuminate/contracts": "^13.38.0",
+    "illuminate/database": "^13.38.0",
+    "illuminate/support": "^13.38.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\Pages\\": "src/",
+      "Liberu\\Cms\\Pages\\Database\\Factories\\": "database/factories/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\Cms\\Pages\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "liberu": {
+      "name": "module-cms-pages"
+    },
+    "laravel": {
+      "providers": [
+        "Liberu\\Cms\\Pages\\PagesServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

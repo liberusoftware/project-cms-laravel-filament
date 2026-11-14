@@ -1,1 +1,6 @@
-{"name":"module-cms-wordpress-migration-api","title":"WordPress Migration API","version":"0.1.0"}
+{
+  "name": "module-cms-wordpress-migration-api",
+  "title": "WordPress Migration API",
+  "version": "0.1.1",
+  "package": "liberusoftware/module-cms-wordpress-migration-api"
+}

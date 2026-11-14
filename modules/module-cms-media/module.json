@@ -1,0 +1,11 @@
+{
+  "layers": [
+    "core"
+  ],
+  "name": "module-cms-media",
+  "package": "liberusoftware/module-cms-media",
+  "version": "0.1.1",
+  "service_providers": [
+    "Liberu\\Cms\\Media\\MediaServiceProvider"
+  ]
+}

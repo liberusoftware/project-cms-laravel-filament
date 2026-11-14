@@ -1,0 +1,6 @@
+{
+  "name": "cms-extension-manager",
+  "title": "Extension Manager",
+  "version": "0.1.1",
+  "package": "liberusoftware/module-cms-extension-manager"
+}

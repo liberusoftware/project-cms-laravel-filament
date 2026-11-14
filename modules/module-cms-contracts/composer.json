@@ -1,0 +1,45 @@
+{
+  "description": "Interfaces, events, and DTOs shared across all Liberu CMS modules. Depended on by everything; depends on nothing.",
+  "require": {
+    "php": "^8.5"
+  },
+  "name": "liberusoftware/module-cms-contracts",
+  "require-dev": {
+    "liberusoftware/package-testbench": "^1.8",
+    "pestphp/pest": "^5.3.3"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\Contracts\\": "src/"
+    }
+  },
+  "homepage": "https://github.com/liberusoftware/module-cms-contracts",
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\Cms\\Contracts\\Tests\\": "tests/"
+    }
+  },
+  "version": "0.1.1",
+  "prefer-stable": true,
+  "extra": {
+    "liberu": {
+      "name": "module-cms-contracts"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/liberusoftware/module-cms-contracts/issues",
+    "source": "https://github.com/liberusoftware/module-cms-contracts"
+  },
+  "scripts": {
+    "test": "pest",
+    "test:coverage": "pest --coverage --min=100"
+  },
+  "type": "liberu-module",
+  "license": "MIT",
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}

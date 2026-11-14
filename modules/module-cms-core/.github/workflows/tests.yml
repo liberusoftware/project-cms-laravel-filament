@@ -1,0 +1,31 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    uses: liberusoftware/.github/.github/workflows/package-tests.yml@75d1786646b095ba49360f735f27e0b2fa932b8d
+    with:
+      coverage-threshold: 100
+
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+          extensions: mbstring, pdo, pdo_sqlite, bcmath, zip, intl
+          coverage: none
+      - run: composer update --no-interaction --prefer-dist --no-progress
+      # Traits must be analysed alongside the classes that consume them.
+      - run: vendor/bin/phpstan analyse -c vendor/liberusoftware/package-testbench/phpstan.neon -l 5 --memory-limit=1G --no-progress src tests/Feature/ExtensionSeamsTest.php

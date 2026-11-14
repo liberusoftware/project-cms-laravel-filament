@@ -1,0 +1,45 @@
+{
+  "description": "Media library for Liberu CMS: secure uploads, storage, folders, and metadata behind a content-agnostic contract.",
+  "require": {
+    "php": "^8.5",
+    "liberusoftware/module-cms-contracts": "^0.1",
+    "liberusoftware/module-cms-core": "^0.1",
+    "filament/filament": "^5.11.0",
+    "illuminate/contracts": "^13.38.0",
+    "illuminate/database": "^13.38.0",
+    "illuminate/filesystem": "^13.38.0",
+    "illuminate/http": "^13.38.0",
+    "illuminate/support": "^13.38.0"
+  },
+  "name": "liberusoftware/module-cms-media",
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\Cms\\Media\\Tests\\": "tests/"
+    }
+  },
+  "version": "0.1.1",
+  "prefer-stable": true,
+  "extra": {
+    "liberu": {
+      "name": "module-cms-media"
+    },
+    "laravel": {
+      "providers": [
+        "Liberu\\Cms\\Media\\MediaServiceProvider"
+      ]
+    }
+  },
+  "support": {
+    "issues": "https://github.com/liberusoftware/module-cms-media-library/issues",
+    "source": "https://github.com/liberusoftware/module-cms-media-library"
+  },
+  "type": "liberu-module",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\Media\\": "src/"
+    }
+  },
+  "homepage": "https://github.com/liberusoftware/module-cms-media-library"
+}

@@ -12949,16 +12949,16 @@
         },
         {
             "name": "liberusoftware/module-cms-offline-and-pwa-filament",
-            "version": "0.1.1",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liberusoftware/module-cms-offline-and-pwa-filament.git",
-                "reference": "c4debfc1e1b6ee710daa52b6b83f1b122bae0b87"
+                "reference": "bce6476dac8718efd2acd7bd898f559cfb324be4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liberusoftware/module-cms-offline-and-pwa-filament/zipball/c4debfc1e1b6ee710daa52b6b83f1b122bae0b87",
-                "reference": "c4debfc1e1b6ee710daa52b6b83f1b122bae0b87",
+                "url": "https://api.github.com/repos/liberusoftware/module-cms-offline-and-pwa-filament/zipball/bce6476dac8718efd2acd7bd898f559cfb324be4",
+                "reference": "bce6476dac8718efd2acd7bd898f559cfb324be4",
                 "shasum": ""
             },
             "require": {
@@ -12990,9 +12990,9 @@
             "description": "Filament adapter for CMS Offline and PWA.",
             "support": {
                 "issues": "https://github.com/liberusoftware/module-cms-offline-and-pwa-filament/issues",
-                "source": "https://github.com/liberusoftware/module-cms-offline-and-pwa-filament/tree/v0.1.1"
+                "source": "https://github.com/liberusoftware/module-cms-offline-and-pwa-filament/tree/v0.1.0"
             },
-            "time": "2026-11-14T14:29:06+00:00"
+            "time": "2026-11-02T14:59:51+00:00"
         },
         {
             "name": "liberusoftware/module-cms-offline-and-pwa-livewire",
@@ -13328,16 +13328,16 @@
         },
         {
             "name": "liberusoftware/module-cms-personalization-filament",
-            "version": "0.1.1",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liberusoftware/module-cms-personalization-filament.git",
-                "reference": "b32920bf6a14df76986df7c19a5bf8e32c76cf6d"
+                "reference": "367abff9780402f9b091dbe5f39b30e5e73683f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liberusoftware/module-cms-personalization-filament/zipball/b32920bf6a14df76986df7c19a5bf8e32c76cf6d",
-                "reference": "b32920bf6a14df76986df7c19a5bf8e32c76cf6d",
+                "url": "https://api.github.com/repos/liberusoftware/module-cms-personalization-filament/zipball/367abff9780402f9b091dbe5f39b30e5e73683f1",
+                "reference": "367abff9780402f9b091dbe5f39b30e5e73683f1",
                 "shasum": ""
             },
             "require": {
@@ -13369,9 +13369,9 @@
             "description": "Filament adapter for CMS Personalization.",
             "support": {
                 "issues": "https://github.com/liberusoftware/module-cms-personalization-filament/issues",
-                "source": "https://github.com/liberusoftware/module-cms-personalization-filament/tree/v0.1.1"
+                "source": "https://github.com/liberusoftware/module-cms-personalization-filament/tree/v0.1.0"
             },
-            "time": "2026-11-14T14:29:08+00:00"
+            "time": "2026-11-02T15:00:42+00:00"
         },
         {
             "name": "liberusoftware/module-cms-personalization-livewire",
@@ -17839,16 +17839,16 @@
         },
         {
             "name": "liberusoftware/module-cms-views-and-query-builder-filament",
-            "version": "0.1.1",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liberusoftware/module-cms-views-and-query-builder-filament.git",
-                "reference": "f72d10283e8e83eafc9d965df96d5f45e7acd326"
+                "reference": "45eac958a7d10bb7a81becbb4a8943aa446af134"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liberusoftware/module-cms-views-and-query-builder-filament/zipball/f72d10283e8e83eafc9d965df96d5f45e7acd326",
-                "reference": "f72d10283e8e83eafc9d965df96d5f45e7acd326",
+                "url": "https://api.github.com/repos/liberusoftware/module-cms-views-and-query-builder-filament/zipball/45eac958a7d10bb7a81becbb4a8943aa446af134",
+                "reference": "45eac958a7d10bb7a81becbb4a8943aa446af134",
                 "shasum": ""
             },
             "require": {
@@ -17880,9 +17880,9 @@
             "description": "Filament adapter for CMS Views and Query Builder.",
             "support": {
                 "issues": "https://github.com/liberusoftware/module-cms-views-and-query-builder-filament/issues",
-                "source": "https://github.com/liberusoftware/module-cms-views-and-query-builder-filament/tree/v0.1.1"
+                "source": "https://github.com/liberusoftware/module-cms-views-and-query-builder-filament/tree/v0.1.0"
             },
-            "time": "2026-11-14T14:29:18+00:00"
+            "time": "2026-11-02T15:44:44+00:00"
         },
         {
             "name": "liberusoftware/module-cms-views-and-query-builder-livewire",

@@ -1,0 +1,44 @@
+{
+  "type": "liberu-module",
+  "support": {
+    "issues": "https://github.com/liberusoftware/module-cms-audit/issues",
+    "source": "https://github.com/liberusoftware/module-cms-audit"
+  },
+  "prefer-stable": true,
+  "require": {
+    "illuminate/database": "^13.38.0",
+    "illuminate/http": "^13.38.0",
+    "liberusoftware/module-cms-contracts": "^0.1",
+    "illuminate/auth": "^13.38.0",
+    "illuminate/support": "^13.38.0",
+    "illuminate/contracts": "^13.38.0",
+    "liberusoftware/module-cms-core": "^0.1",
+    "php": "^8.5"
+  },
+  "homepage": "https://github.com/liberusoftware/module-cms-audit",
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\Audit\\": "src/"
+    }
+  },
+  "name": "liberusoftware/module-cms-audit",
+  "description": "Audit logging for Liberu CMS: turns security-relevant events into append-only audit records with a read-only admin viewer.",
+  "minimum-stability": "dev",
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\Cms\\Audit\\Tests\\": "tests/"
+    }
+  },
+  "license": "MIT",
+  "extra": {
+    "liberu": {
+      "name": "module-cms-audit"
+    },
+    "laravel": {
+      "providers": [
+        "Liberu\\Cms\\Audit\\CmsAuditServiceProvider"
+      ]
+    }
+  },
+  "version": "0.1.1"
+}

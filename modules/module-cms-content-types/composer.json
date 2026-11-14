@@ -1,0 +1,44 @@
+{
+  "type": "liberu-module",
+  "support": {
+    "issues": "https://github.com/liberusoftware/module-cms-content-entities/issues",
+    "source": "https://github.com/liberusoftware/module-cms-content-entities"
+  },
+  "prefer-stable": true,
+  "require": {
+    "illuminate/database": "^13.38.0",
+    "liberusoftware/module-cms-content": "^0.1",
+    "liberusoftware/module-cms-contracts": "^0.1",
+    "illuminate/support": "^13.38.0",
+    "illuminate/contracts": "^13.38.0",
+    "liberusoftware/module-cms-core": "^0.1",
+    "php": "^8.5"
+  },
+  "homepage": "https://github.com/liberusoftware/module-cms-content-entities",
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\ContentTypes\\": "src/",
+      "Liberu\\Cms\\ContentTypes\\Database\\Factories\\": "database/factories/"
+    }
+  },
+  "name": "liberusoftware/module-cms-content-types",
+  "description": "Custom content types for Liberu CMS: JSON field schemas and validated content entries with workflow and versioning.",
+  "minimum-stability": "dev",
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\Cms\\ContentTypes\\Tests\\": "tests/"
+    }
+  },
+  "license": "MIT",
+  "extra": {
+    "liberu": {
+      "name": "module-cms-content-types"
+    },
+    "laravel": {
+      "providers": [
+        "Liberu\\Cms\\ContentTypes\\ContentTypesServiceProvider"
+      ]
+    }
+  },
+  "version": "0.1.1"
+}

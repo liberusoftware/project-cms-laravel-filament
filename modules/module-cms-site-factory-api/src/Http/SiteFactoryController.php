@@ -25,7 +25,7 @@ final class SiteFactoryController
     {
         $data = $this->validated($request, ['key' => ['required', 'string', 'max:100'], 'name' => ['required', 'string', 'max:255'], 'template' => ['sometimes', 'nullable', 'string'], 'domain' => ['sometimes', 'nullable', 'string', 'max:255']]);
 
-        return response()->json(['data' => $this->site($service->provision($this->stringInput($data, 'key'), $this->stringInput($data, 'name'), $this->nullableStringInput($data, 'template'), $this->nullableStringInput($data, 'domain'), $request->user()?->current_team_id))], 201);
+        return response()->json(['data' => $this->site($service->provision($this->stringInput($data, 'key'), $this->stringInput($data, 'name'), $this->nullableStringInput($data, 'template'), $this->nullableStringInput($data, 'domain'), data_get($request->user(), 'current_team_id')))], 201);
     }
 
     public function show(int $id): JsonResponse
@@ -63,7 +63,7 @@ final class SiteFactoryController
     {
         $data = $this->validated($request, ['key' => ['required', 'string', 'max:100'], 'name' => ['required', 'string', 'max:255'], 'configuration' => ['sometimes', 'array'], 'initial_content' => ['sometimes', 'array']]);
 
-        return response()->json(['data' => $this->templateData($service->template($this->stringInput($data, 'key'), $this->stringInput($data, 'name'), $this->arrayInput($data, 'configuration'), $this->arrayInput($data, 'initial_content'), $request->user()?->current_team_id))], 201);
+        return response()->json(['data' => $this->templateData($service->template($this->stringInput($data, 'key'), $this->stringInput($data, 'name'), $this->arrayInput($data, 'configuration'), $this->arrayInput($data, 'initial_content'), data_get($request->user(), 'current_team_id')))], 201);
     }
 
     public function cloneById(Request $request, int $id, SiteFactoryService $service): JsonResponse

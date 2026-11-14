@@ -1,0 +1,45 @@
+{
+  "name": "liberusoftware/module-cms-posts",
+  "description": "Posts module for Liberu CMS: blog posts with taxonomy (categories & tags), workflow, versioning, and featured media.",
+  "type": "liberu-module",
+  "license": "MIT",
+  "homepage": "https://github.com/liberusoftware/module-cms-posts",
+  "support": {
+    "issues": "https://github.com/liberusoftware/module-cms-posts/issues",
+    "source": "https://github.com/liberusoftware/module-cms-posts"
+  },
+  "version": "0.1.1",
+  "require": {
+    "php": "^8.5",
+    "liberusoftware/module-cms-contracts": "^0.1",
+    "liberusoftware/module-cms-core": "^0.1",
+    "liberusoftware/module-cms-content": "^0.1",
+    "filament/filament": "^5.11.0",
+    "illuminate/contracts": "^13.38.0",
+    "illuminate/database": "^13.38.0",
+    "illuminate/support": "^13.38.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\Posts\\": "src/",
+      "Liberu\\Cms\\Posts\\Database\\Factories\\": "database/factories/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\Cms\\Posts\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "liberu": {
+      "name": "module-cms-posts"
+    },
+    "laravel": {
+      "providers": [
+        "Liberu\\Cms\\Posts\\PostsServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

@@ -1,1 +1,11 @@
-{"name":"module-cms-content-entities-filament","package":"liberusoftware/module-cms-content-entities-filament","version":"0.1.0","layers":["filament"],"service_providers":["Liberu\\Cms\\ContentEntitiesFilament\\ContentEntitiesFilamentServiceProvider"]}
+{
+  "name": "module-cms-content-entities-filament",
+  "package": "liberusoftware/module-cms-content-entities-filament",
+  "version": "0.1.1",
+  "layers": [
+    "filament"
+  ],
+  "service_providers": [
+    "Liberu\\Cms\\ContentEntitiesFilament\\ContentEntitiesFilamentServiceProvider"
+  ]
+}

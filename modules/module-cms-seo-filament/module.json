@@ -1,1 +1,11 @@
-{"name":"module-cms-seo-filament","package":"liberusoftware/module-cms-seo-filament","version":"0.1.0","layers":["filament"],"service_providers":["Liberu\\Cms\\SeoFilament\\SeoFilamentServiceProvider"]}
+{
+  "name": "module-cms-seo-filament",
+  "package": "liberusoftware/module-cms-seo-filament",
+  "version": "0.1.1",
+  "layers": [
+    "filament"
+  ],
+  "service_providers": [
+    "Liberu\\Cms\\SeoFilament\\SeoFilamentServiceProvider"
+  ]
+}

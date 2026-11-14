@@ -1,0 +1,62 @@
+{
+  "description": "The Liberu CMS kernel: module registry, lifecycle manager, event bus, base module classes, and the module generator.",
+  "require": {
+    "liberusoftware/module-cms-contracts": "^0.1.1",
+    "illuminate/console": "^13.38.0",
+    "illuminate/contracts": "^13.38.0",
+    "illuminate/database": "^13.38.0",
+    "illuminate/support": "^13.38.0",
+    "php": "^8.5",
+    "illuminate/events": "^13.38.0"
+  },
+  "name": "liberusoftware/module-cms-core",
+  "require-dev": {
+    "liberusoftware/package-testbench": "^1.8",
+    "pestphp/pest": "^5.3.3"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\Core\\": "src/"
+    }
+  },
+  "homepage": "https://github.com/liberusoftware/module-cms-core",
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\Cms\\Core\\Tests\\": "tests/"
+    }
+  },
+  "version": "0.1.1",
+  "prefer-stable": true,
+  "extra": {
+    "liberu": {
+      "name": "module-cms-core"
+    },
+    "laravel": {
+      "providers": [
+        "Liberu\\Cms\\Core\\CmsCoreServiceProvider"
+      ]
+    }
+  },
+  "support": {
+    "issues": "https://github.com/liberusoftware/module-cms-core/issues",
+    "source": "https://github.com/liberusoftware/module-cms-core"
+  },
+  "scripts": {
+    "test": "pest",
+    "test:coverage": "pest --coverage --min=100"
+  },
+  "type": "liberu-module",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/liberusoftware/module-cms-contracts.git"
+    }
+  ],
+  "license": "MIT",
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
