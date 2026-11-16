@@ -2,12 +2,15 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Admin\Pages\PlatformDashboard;
 use App\Filament\Pages\AccountSetupWizard;
+use App\Filament\Pages\Workspace;
 use App\Http\Middleware\EnsureAccountSetup;
 use App\Http\Middleware\EnsureTwoFactorForPrivilegedUsers;
 use App\Http\Middleware\SetPermissionsTeam;
 use App\Models\Team;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
+use Filament\Actions\Action;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -40,22 +43,18 @@ class AppPanelProvider extends PanelProvider
             ->id('app')
             ->path('/admin')
             ->viteTheme('resources/css/filament/app/theme.css')
-            ->colors(['primary' => Color::Gray])
-            ->brandLogo('https://laravel.com/img/logomark.min.svg')
-            ->brandLogoHeight('40px')
-            ->login()
-            ->registration()
-            ->passwordReset()
-            ->profile()
-            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
-            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
-            ->pages([
-                Dashboard::class,
-                AccountSetupWizard::class,
+            ->colors(['primary' => Color::Indigo])
+            ->brandName('Liberu CMS')
+            ->userMenuItems([
+                Action::make('platform')->label('Platform administration')->icon('heroicon-o-cog-6-tooth')
+                    ->url(fn () => PlatformDashboard::getUrl(panel: 'admin'))
+                    ->visible(fn () => (bool) auth()->user()?->is_platform_admin),
             ])
+            ->sidebarCollapsibleOnDesktop()
             ->navigationGroups([
                 'Getting started',
                 'Content',
+                'CMS',
                 'Structure',
                 'Assets',
                 'Experience',
@@ -64,6 +63,17 @@ class AppPanelProvider extends PanelProvider
                 'Settings',
                 'Developer tools',
                 'Operations',
+            ])
+            ->login()
+            ->registration()
+            ->passwordReset()
+            ->profile()
+            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
+            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
+            ->pages([
+                Dashboard::class,
+                Workspace::class,
+                AccountSetupWizard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
