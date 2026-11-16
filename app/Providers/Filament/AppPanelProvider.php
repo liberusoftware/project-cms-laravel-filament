@@ -3,7 +3,9 @@
 namespace App\Providers\Filament;
 
 use App\Filament\Admin\Pages\PlatformDashboard;
+use App\Filament\Pages\AccountSetupWizard;
 use App\Filament\Pages\Workspace;
+use App\Http\Middleware\EnsureAccountSetup;
 use App\Http\Middleware\EnsureTwoFactorForPrivilegedUsers;
 use App\Http\Middleware\SetPermissionsTeam;
 use App\Models\Team;
@@ -12,6 +14,7 @@ use Filament\Actions\Action;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
@@ -48,7 +51,19 @@ class AppPanelProvider extends PanelProvider
                     ->visible(fn () => (bool) auth()->user()?->is_platform_admin),
             ])
             ->sidebarCollapsibleOnDesktop()
-            ->navigationGroups(['Content', 'CMS', 'Settings', 'Administration'])
+            ->navigationGroups([
+                'Getting started',
+                'Content',
+                'CMS',
+                'Structure',
+                'Assets',
+                'Experience',
+                'Administration',
+                'Account',
+                'Settings',
+                'Developer tools',
+                'Operations',
+            ])
             ->login()
             ->registration()
             ->passwordReset()
@@ -56,7 +71,9 @@ class AppPanelProvider extends PanelProvider
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
+                Dashboard::class,
                 Workspace::class,
+                AccountSetupWizard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
@@ -78,6 +95,7 @@ class AppPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                EnsureAccountSetup::class,
                 EnsureTwoFactorForPrivilegedUsers::class,
             ])
             ->plugins([
